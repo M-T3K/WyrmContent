@@ -1,0 +1,106 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "WyrmContent",
+				"abbreviation": "WYRM",
+				"full": "Wyrm Additional Content (BETA)",
+				"url": "https://github.com/M-T3K/WyrmContent",
+				"authors": [
+					"Prince_Kiwii"
+				],
+				"convertedBy": []
+			}
+		],
+		"dateAdded": 1588261466,
+		"dateLastModified": 1588261466
+    },
+    "feat": [
+        {
+            "name": "The Diplomat",
+            "source": "WYRM",
+            "entries": [
+                "You master the arts of diplomacy, gaining the following benefits:",
+                {
+                    "type": "list",
+                    "items": [
+                        "Increase your Charisma score by 1, to a maximum of 20.",
+                        "You gain proficiency in the Persuasion skill. If you are already proficient in the skill, you gain expertise instead.",
+                        "If you spend 1 minute talking to someone within 10ft of you who can understand what you say, you can make a Charisma (Persuasion) check contested by the creature's Wisdom (Insight) check.  If you or your companions are fighting the creature, your check automatically fails. If your check succeeds, the target is charmed by you for 1 minute or until it leaves your 10ft reach."
+                    ]
+                }
+            ],
+            "ability": [
+                {
+                    
+                    "cha": 1
+                }
+            ]
+        }
+    ],
+	"spell": [
+		{
+			"name": "Healing Elixir",
+			"source": "WYRM",
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "A vial of wine, or another drink made of alcohol and water, which is substituted",
+					"consumed": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24,
+						"upTo": true
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You create a magical healing elixir from the vial. This vial acts like a Healing Potion, with the caveat that all healing is temporary: it provides {@dice 2d4 + 2} temporary hitpoints."
+			],
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 2nd level or higher, the temporary hitpoints it provides increases by {@dice 1d4 + 1} for each slot level above 1st."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
+					}
+				]
+			},
+			"uniqueId": "2f114a677900e03c1b7d302e312b84a7"
+		}
+	]
+}
