@@ -2,9 +2,9 @@
 	"_meta": {
 		"sources": [
 			{
-				"json": "WyrmContent",
+				"json": "WYRM",
 				"abbreviation": "WYRM",
-				"full": "Wyrm Additional Content (BETA)",
+				"full": "Wyrm Additional Content",
 				"url": "https://github.com/M-T3K/WyrmContent",
 				"authors": [
 					"Prince_Kiwii"
@@ -15,29 +15,6 @@
 		"dateAdded": 1588261466,
 		"dateLastModified": 1588261466
     },
-    "feat": [
-        {
-            "name": "The Diplomat",
-            "source": "WYRM",
-            "entries": [
-                "You master the arts of diplomacy, gaining the following benefits:",
-                {
-                    "type": "list",
-                    "items": [
-                        "Increase your Charisma score by 1, to a maximum of 20.",
-                        "You gain proficiency in the Persuasion skill. If you are already proficient in the skill, you gain expertise instead.",
-                        "If you spend 1 minute talking to someone within 10ft of you who can understand what you say, you can make a Charisma (Persuasion) check contested by the creature's Wisdom (Insight) check.  If you or your companions are fighting the creature, your check automatically fails. If your check succeeds, the target is charmed by you for 1 minute or until it leaves your 10ft reach."
-                    ]
-                }
-            ],
-            "ability": [
-                {
-                    
-                    "cha": 1
-                }
-            ]
-        }
-    ],
 	"spell": [
 		{
 			"name": "Healing Elixir",
@@ -101,6 +78,182 @@
 				]
 			},
 			"uniqueId": "2f114a677900e03c1b7d302e312b84a7"
+        }
+    ],
+    "feat": [
+        {
+			"name": "Diplomatic Speaker",
+			"source": "WYRM",
+			"prerequisite": false,
+            "entries": [
+                "You master the arts of diplomacy, gaining the following benefits:",
+                {
+                    "type": "list",
+                    "items": [ 
+                       "You gain proficiency in the Persuasion skill. If you are already proficient in the skill, you gain expertise instead.",
+                        "If you spend 1 minute talking to someone within 10ft of you who can understand what you say, you can make a Charisma (Persuasion) check contested by the creature's Wisdom (Insight) check.  If you or your companions are fighting the creature, your check automatically fails. If your check succeeds, the target is charmed by you for 1 minute or until it leaves your 30ft reach. This can only be used once per long rest."
+                    ]
+                }
+            ],
+            "ability": [
+                {
+                    "cha": 1
+                }
+            ]
+        },
+        {
+			"name": "Whip Master",
+			"source": "WYRM",
+			"prerequisite": [
+                {
+                    "other": "Proficiency with whips"
+                }
+            ],
+            "entries": [
+                "Whether you are a slaver, or an animal handler, you have reached a level of mastery with the Whip that few can attain. You gain the following benefits:",
+                {
+                    "type": "list",
+                    "items": [ 
+                       "You add your proficiency bonus to any damage caused by the whip. Additionally, you gain expertise at the usage of the whip.",
+                       "You gain the ability to react quickly to other creatures with your whip. You may use your reaction to attack a creature within reach using your whip.",
+                       "You may attempt to grapple a creature whenever an attack with the whip hits. If the creature is grappled, the attack deals no damage."
+                    ]
+                }
+            ],
+            "ability": [
+                {
+                    "dex": 1
+                }
+            ]
+		}
+	],
+	"race": [
+		{
+			"name": "Sentient Goo",
+			"source": "WYRM",
+			"size": "M",
+			"speed": {
+				"walk": 30
+			},
+			"ability": [
+				{
+					"con": 2,
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"int",
+							"wis",
+							"cha"
+						],
+						"count": 1
+					}
+				}
+			],
+			"entries": [
+				{
+					"name": "Age",
+					"type": "entries",
+					"entries": [
+						"Nobody knows how old these creatures are. There have always been tales of shapeshifting beings that appear in wetlands to terrorize beings.",
+						"A sentient goo simply manifests itself from the organic matter left in wet areas, and from that point onwards it can simply live indefinetely. The oldest goo ever recorded was Oomph, and had lived for more than 800 years.",
+						"When born, they might be tiny beings, and use the wetlands or other goos to grow in size until they reach adulthood."
+					]
+				},
+				{
+					"name": "Alignment",
+					"type": "entries",
+					"entries": [
+						"These beings are generally neutral albeit chaotic. They don't generally lend themselves to good or evil."
+					]
+				},
+				{
+					"name": "Size",
+					"type": "entries",
+					"entries": [
+						"A Sentient Goo can be anywhere from tiny to medium in size, depending on their age and the shape they are taking."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Speed",
+					"entries": [
+						"Your base walking speed is 30 feet.",
+						"Encumbrance rules still apply to you normally, but you don't need bags to carry your items as long as they fit within your body."
+					]
+				},
+				{
+					"name": "Tremorsense",
+					"entries": [
+						"The Sentient Goo doesn't have vision. Instead, is sensitive to vibrations in the ground and water, and can automatically pinpoint the location of anything that is in contact with the ground.",
+						"You gain tremorsense as your vision up to a range of 30ft. You cannot see beyond that range."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Amphibian",
+					"entries": [
+						"A sentient goo can breath both in air and water, but requires its body to be constantly hydrated. The goo needs 1 liter of fluid every 6 hours.",
+						"Everytime the goo fails to meet this requirement, it gains an additional level of exhaustion that can only be removed by hydrating.",
+						"In hot and dry environments, the time becomes 3 hours instead of 6.",
+						"More than 3 levels of exhaustion renders the goo incapable of activating its fluid form."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Fluid Form",
+					"entries": [
+						"As an action, you can enter your fluid form. When you do, you can either equip or unequip a set of armor.",
+						"As a bonus action, you may also unequip any other items that you may carry or equip an additional item through this ability.",
+						"As long as you are in fluid form, you can squeeze through any space as small as 1cm.",
+						"If any of the items that you carry are bigger than this, they get left behind.",
+						"While you are in fluid form, you become immune to non magical piercing damage, but cannot attack."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Acidic Resistance",
+					"entries": [
+						"You have resistance against acid damage."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Languages",
+					"entries": [
+						"You can speak, read, and write primordial."
+					],
+					"type": "entries"
+				}
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://www.dandwiki.com/w/images/b/b3/Ooze_2.jpg"
+						}
+					}
+				],
+				"entries": [
+					"{@b Sentient Goo}",
+					"These interesting yet often misunderstood creatures are a distant cousin of modern elementals.",
+					"Uneducated beings usually consider them a threat to their societies, and underdeveloped civilizations such as Troglodytes study them with great interest.",
+					"It's rare to hear of the true sighting of a Sentient Goo, as commoners easily confuse them with Slimes and Oozes. However, when they are encountered, people just refer to them as Swamp Things.",
+					"When Oomph the Triumphant attacked villages, the only information survivors gave was that 'it came from the bog'. Since then, this description has also carried to other goos."
+					]
+			},
+			"traitTags": [
+				"Tremorsense",
+				"Amphibian",
+				"Damage Resistance"
+			],
+			"languageProficiencies": [
+				{
+					"primordial": true
+				}
+			]
 		}
 	]
 }

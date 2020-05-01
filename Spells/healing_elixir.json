@@ -2,9 +2,9 @@
 	"_meta": {
 		"sources": [
 			{
-				"json": "WyrmAdditionalContentBETA",
-				"abbreviation": "WACB",
-				"full": "Wyrm Additional Content (BETA)",
+				"json": "WYRM",
+				"abbreviation": "WYRM",
+				"full": "Wyrm Additional Content",
 				"url": "",
 				"authors": [
 					"Prince_Kiwii"
@@ -18,7 +18,7 @@
 	"spell": [
 		{
 			"name": "Healing Elixir",
-			"source": "WyrmAdditionalContentBETA",
+			"source": "WYRM",
 			"level": 1,
 			"school": "T",
 			"time": [
