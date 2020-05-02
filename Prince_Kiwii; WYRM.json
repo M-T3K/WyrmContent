@@ -14,7 +14,7 @@
 		],
 		"dateAdded": 1588261466,
 		"dateLastModified": 1588261466
-    },
+	},
 	"spell": [
 		{
 			"name": "Healing Elixir",
@@ -102,9 +102,12 @@
 			},
 			"duration": [
 				{
-					"type": "minutes",
-					"amount": 1,
-					"upTo": true
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					}
 				}
 			],
 			"meta": {
@@ -326,6 +329,33 @@
 				{
 					"primordial": true
 				}
+			]
+		}
+	],
+	"item": [
+		{
+			"name": "Cursed Jackalope Leg", 
+			"type": "Necklace",
+			"rarity": "legendary",
+			"wondrous": true,
+			"source": "WYRM",
+			"entries": [
+				"From this necklace hangs a Jackalope's Leg.",
+				"Any being that touches it is immediately bestowed with great luck for as long as it holds it, maximizing all rolls.",
+				"This item is cursed. Its luck abilities only apply as long as it remains in a creature's possession.",
+				"However, due to the nature of the curse, it always finds a way to disappear. When it stops being in a creature's posession, it gives off permanent bad luck, causing all rolls to be minimized, until the being recovers the leg or until a {@spell remove curse} is casted upon the leg, causing it to be destroyed.",
+				"Using {@spell remove curse} on the creature does not remove the curse."
+			]
+		},
+		{
+			"name": "Jackalope Leg", 
+			"type": "Necklace",
+			"rarity": "legendary",
+			"wondrous": true,
+			"source": "WYRM",
+			"entries": [
+				"From this necklace hangs a Jackalope's Leg.",
+				"Any being that touches it is immediately given great luck for as long as it holds it, maximizing all rolls."
 			]
 		}
 	]
