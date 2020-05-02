@@ -12,19 +12,19 @@ Marked Checkboxes represent developed content, where as emtpy checkboxes represe
 
 #### Transmutation
 
-[X] Healing Elixir
-[ ] Flammelian Touch
+- [X] Healing Elixir
+- [ ] Flammelian Touch
 
 #### Necromancy
 
-[X] Lesser Decay
-[ ] Greater Decay
-[ ] Mass Decay
+- [X] Lesser Decay
+- [ ] Greater Decay
+- [ ] Mass Decay
 
 
 ### Races
 
-[X] Sentient Goo
-[ ] Penguin Aarocroka
-[ ] Owl Aven
+- [X] Sentient Goo
+- [ ] Penguin Aarocroka
+- [ ] Owl Aven
 
