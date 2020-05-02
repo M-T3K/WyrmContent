@@ -43,12 +43,7 @@
 			},
 			"duration": [
 				{
-					"type": "timed",
-					"duration": {
-						"type": "hour",
-						"amount": 24,
-						"upTo": true
-					}
+					"type": "instant"
 				}
 			],
 			"meta": {
@@ -78,6 +73,77 @@
 				]
 			},
 			"uniqueId": "2f114a677900e03c1b7d302e312b84a7"
+		},
+		{
+			"name": "Lesser Decay",
+			"source": "WYRM",
+			"level": 3,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "A small bone and a decomposing piece of meat, which are consumed",
+					"consumed": true
+				}
+			},
+			"duration": [
+				{
+					"type": "minutes",
+					"amount": 1,
+					"upTo": true
+				}
+			],
+			"meta": {
+				"ritual": false
+			},
+			"entries": [
+				"You point at a creature within range. Its flesh starts to rot. It must make a Constitution saving throw.",
+				"A creature takes {@dice 4d6} necrotic damage on a failed save, or half as much on a successful one.",
+				"Additionally, if it fails the saving throw, it gains a level of {@condition exhaustion}. ",
+				"Moreover, the effects repeat at the start of the target's turn for up to 1 minute."
+			],
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 4th level or higher, the damage die increases by {@dice 1d6} for each slot level above 3rd."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Oathbreaker Paladin",
+						"source": "DMG"
+					},
+					{
+						"name": "Death Cleric",
+						"source": "PHB"
+					}
+				]
+			}
         }
     ],
     "feat": [
@@ -90,8 +156,8 @@
                 {
                     "type": "list",
                     "items": [ 
-                       "You gain proficiency in the Persuasion skill. If you are already proficient in the skill, you gain expertise instead.",
-                        "If you spend 1 minute talking to someone within 10ft of you who can understand what you say, you can make a Charisma (Persuasion) check contested by the creature's Wisdom (Insight) check.  If you or your companions are fighting the creature, your check automatically fails. If your check succeeds, the target is charmed by you for 1 minute or until it leaves your 30ft reach. This can only be used once per long rest."
+                       "You gain proficiency in the {@skill Persuasion} skill. If you are already proficient in the skill, you gain expertise instead.",
+                        "If you spend 1 minute talking to someone within 10ft of you who can understand what you say, you can make a Charisma ({@skill Persuasion}) check contested by the creature's Wisdom (Insight) check.  If you or your companions are fighting the creature, your check automatically fails. If your check succeeds, the target is charmed by you for 1 minute or until it leaves your 30ft reach. This can only be used once per long rest."
                     ]
                 }
             ],
@@ -183,10 +249,17 @@
 					]
 				},
 				{
+					"type": "entries",
+					"name": "Color",
+					"entries": [
+						"You can have any color, but it will always be translucid."
+					]
+				},
+				{
 					"name": "Tremorsense",
 					"entries": [
 						"The Sentient Goo doesn't have vision. Instead, is sensitive to vibrations in the ground and water, and can automatically pinpoint the location of anything that is in contact with the ground.",
-						"You gain tremorsense as your vision up to a range of 30ft. You cannot see beyond that range."
+						"You gain {@sense tremorsense} as your vision up to a range of 30ft. You cannot see beyond that range."
 					],
 					"type": "entries"
 				},
@@ -194,9 +267,9 @@
 					"name": "Amphibian",
 					"entries": [
 						"A sentient goo can breath both in air and water, but requires its body to be constantly hydrated. The goo needs 1 liter of fluid every 6 hours.",
-						"Everytime the goo fails to meet this requirement, it gains an additional level of exhaustion that can only be removed by hydrating.",
+						"Everytime the goo fails to meet this requirement, it gains an additional level of {@condition exhaustion} that can only be removed by hydrating.",
 						"In hot and dry environments, the time becomes 3 hours instead of 6.",
-						"More than 3 levels of exhaustion renders the goo incapable of activating its fluid form."
+						"More than 3 levels of {@condition exhaustion} renders the goo incapable of activating its fluid form."
 					],
 					"type": "entries"
 				},
@@ -241,7 +314,7 @@
 					"These interesting yet often misunderstood creatures are a distant cousin of modern elementals.",
 					"Uneducated beings usually consider them a threat to their societies, and underdeveloped civilizations such as Troglodytes study them with great interest.",
 					"It's rare to hear of the true sighting of a Sentient Goo, as commoners easily confuse them with Slimes and Oozes. However, when they are encountered, people just refer to them as Swamp Things.",
-					"When Oomph the Triumphant attacked villages, the only information survivors gave was that 'it came from the bog'. Since then, this description has also carried to other goos."
+					"When Oomph the Slimy attacked villages, the only information survivors gave was that 'it came from the bog'. Since then, this description has also carried to other goos, and most folk believe they are all descendants of Oomph."
 					]
 			},
 			"traitTags": [
