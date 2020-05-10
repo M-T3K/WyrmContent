@@ -357,6 +357,18 @@
 				"From this necklace hangs a Jackalope's Leg.",
 				"Any being that touches it is immediately given great luck for as long as it holds it, maximizing all rolls."
 			]
+		},
+		{
+			"name": "Crystallized Kröken Eye", 
+			"type": "Item",
+			"rarity": "very rare",
+			"wondrous": true,
+			"source": "WYRM",
+			"entries": [
+				"This is the cristallized eye of a Kroken, a distant relative of the Kraken.",
+				"It holds {@dice 1d6} charges of the spell {@spell lightning bolt}. These charges recharge at dawn.",
+				"Additionally, it can be used to create an item infused with lightning resistance."
+			]
 		}
 	]
 }
