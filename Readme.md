@@ -30,4 +30,18 @@ Marked Checkboxes represent developed content, where as emtpy checkboxes represe
 
 ### Items
 
-- [] Rabbit Leg
+#### Magical Items
+- [X] Jackalope Leg (with Cursed Variant)
+- [X] Vial of Nekronectar
+- [X] Crystallized Kroken Eye
+- [ ] Philosopher Stone
+- [X] Bracers of Tavern Brawling
+
+### Creatures
+
+- [X] Jackalope
+- [X] Kroken
+- [ ] Nekrospawn
+- [ ] Nameless from The Nameless City
+- [ ] Ibians from the City of Ib
+- [ ] Splax (Alien-Like Humanoids with Xenomorph shape, meant to be similar to mind flayers)

@@ -69,6 +69,10 @@
 					{
 						"name": "Artificer",
 						"source": "ERLW"
+					},
+					{
+						"name": "Blood Hunter",
+						"source": "BH2020"
 					}
 				]
 			},
@@ -114,10 +118,11 @@
 				"ritual": false
 			},
 			"entries": [
-				"You point at a creature within range. Its flesh starts to rot. It must make a Constitution saving throw.",
+				"You point at a creature within range. Some of its blood becomes Nekronectar, causing its flesh begins to rot. It must make a Constitution saving throw.",
 				"A creature takes {@dice 4d6} necrotic damage on a failed save, or half as much on a successful one.",
 				"Additionally, if it fails the saving throw, it gains a level of {@condition exhaustion}. ",
-				"Moreover, the effects repeat at the start of the target's turn for up to 1 minute."
+				"Moreover, the effects repeat at the start of the target's turn for up to 1 minute.",
+				"A successful save stops the effects and heals the blood, but exhaustion levels and damage remain."
 			],
 			"entriesHigherLevel": [
 				{
@@ -132,18 +137,58 @@
 			],
 			"savingThrow": true,
 			"classes": {
-				"fromClassList": [
+				"fromSubclass": [
 					{
-						"name": "Wizard",
-						"source": "PHB"
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Necromancy",
+							"source": "PHB"
+						}
 					},
 					{
-						"name": "Oathbreaker Paladin",
-						"source": "DMG"
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Transmutation",
+							"source": "PHB"
+						}
 					},
 					{
-						"name": "Death Cleric",
-						"source": "PHB"
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Death",
+							"source": "DMG"
+						}
+						
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Grave",
+							"source": "XGE"
+						}
+						
+					},
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Oathbreaker",
+							"source": "DMG"
+						}
 					}
 				]
 			}
@@ -340,7 +385,7 @@
 			"wondrous": true,
 			"source": "WYRM",
 			"entries": [
-				"From this necklace hangs a Jackalope's Leg.",
+				"From this necklace hangs a {@creature Jackalope|WYRM}'s Leg.",
 				"Any being that touches it is immediately bestowed with great luck for as long as it holds it, maximizing all rolls.",
 				"This item is cursed. Its luck abilities only apply as long as it remains in a creature's possession.",
 				"However, due to the nature of the curse, it always finds a way to disappear. When it stops being in a creature's posession, it gives off permanent bad luck, causing all rolls to be minimized, until the being recovers the leg or until a {@spell remove curse} is casted upon the leg, causing it to be destroyed.",
@@ -354,20 +399,200 @@
 			"wondrous": true,
 			"source": "WYRM",
 			"entries": [
-				"From this necklace hangs a Jackalope's Leg.",
+				"From this necklace hangs a {@creature Jackalope|WYRM}'s Leg.",
 				"Any being that touches it is immediately given great luck for as long as it holds it, maximizing all rolls."
 			]
 		},
 		{
-			"name": "Crystallized Kröken Eye", 
+			"name": "Crystallized Kroken Eye", 
 			"type": "Item",
 			"rarity": "very rare",
 			"wondrous": true,
 			"source": "WYRM",
 			"entries": [
-				"This is the cristallized eye of a Kroken, a distant relative of the Kraken.",
+				"This is the cristallized eye of a {@creature Kroken|WYRM}, a distant relative of the Kraken.",
 				"It holds {@dice 1d6} charges of the spell {@spell lightning bolt}. These charges recharge at dawn.",
 				"Additionally, it can be used to create an item infused with lightning resistance."
+			]
+		},
+		{
+			"name": "Vial of Nekronectar",
+			"type": "Item",
+			"rarity": "rare",
+			"wondrous": true,
+			"source": "WYRM",
+			"entries": [
+				"A fluid produced as residue when reanimating dead creatures. ",
+				"It can generally be found in the proximity of undead beings.",
+				"It acts as a healing potion for the undead. It is highly toxic to living creatures.",
+				"When a living being drinks a Vial of Nekronectar, it acts as a drug. First, it gives a temporary boost to their Strength and Dexterity, gaining {@dice 1d4} on all checks that depend on them for 10 minutes.",
+				"After this time, a living being must make a Constitution Saving throw check against a generalized {@dice 1d20} + 1 for every usage of the substance.",
+				"The difference represents the length in hours for which the being falls into madness. Additionally, it drops to half its current hitpoints and cannot heal beyond that for the duration of the effect.",
+				"Finally, if a creature dies under the effects of the Nekronectar it will rise as an {@creature Nekrospawn|WYRM}, a champion of the Abyss corrrupted by its weakness of mind."
+			]	
+		},
+		{
+			"name": "Bracers of Tavern Brawling",
+			"type": "Item",
+			"rarity": "very rare",
+			"wondrous": true,
+			"reqAttune": true,
+			"ac": "+1",
+			"source": "WYRM",
+			"entries": [
+				"When attuned to these bracers, all unarmed attacks have +1 to both damage and attack rolls. Additionally, it provides +1 to armor."
+			]	
+		}
+	],
+	"monster": [
+		{
+			"name": "Kroken",
+			"size": "H",
+			"type": {
+				"type": "monstrosity",
+				"tags": []
+			},
+			"source": "WYRM",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 230,
+				"formula": "20d12 + 100"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 50
+			},
+			"str": 29,
+			"dex": 14,
+			"con": 20,
+			"int": 16,
+			"wis": 18,
+			"cha": 18,
+			"skill": {
+				"athletics": "+14",
+				"perception": "+9"
+			},
+			"resist": [
+				"cold"
+			],
+			"immune": [
+				"lightning",
+				"thunder"
+			],
+			"passive": 19,
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"languages": [
+				"Aquan"
+			],
+			"cr": "13",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"The kroken can breathe air and water."
+					]
+				},
+				{
+					"name": "Innate Spellcasting",
+					"entries": [
+						"The kroken's innate spellcasting ability is Charisma (spell save DC 17). The kraken can innately cast the following spells, requiring no components:","A creature takes {@dice 4d6} necrotic damage on a failed save, or half as much on a successful one.",
+						"3/day each: {@spell control weather}, {@spell water breathing}, {@spell lightning bolt}",
+						"The {@spell lightning bolt} comes from its eyes, which upon death crystallize and still hold this power, becoming a {@item crystallized kroken eye|WYRM}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The Kroken makes two attacks: one with its claw and one with its tentacles."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 14} to hit, reach 10 ft., one target. {@h}30 ({@damage 6d6 + 9}) slashing damage."
+					]
+				},
+				{
+					"name": "Tentacles",
+					"entries": [
+						"{@atk mw} {@hit 14} to hit, reach 20 ft., one target. {@h}30 ({@damage 6d6 + 9}) bludgeoning damage, and the target is {@condition grapppled} (escape DC {@dc 17}). Until this grapple ends, the target is {@condition restrained}."
+					]
+				}
+			]
+		},
+		{
+			"name": "Jackalope",
+			"size": "S",
+			"type": {
+				"type": "beast",
+				"tags": []
+			},
+			"source": "WYRM",
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 10,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 3,
+				"formula": "1d6"
+			},
+			"speed": {
+				"walk": 60
+			},
+			"str": 8,
+			"dex": 12,
+			"con": 6,
+			"int": 6,
+			"wis": 2,
+			"cha": 4,
+			"resist": [
+				"cold"
+			],
+			"passive": 10,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"languages": [
+				"Druidic"
+			],
+			"cr": "0",
+			"action": [
+				{
+					"name": "Charge",
+					"entries": [
+						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}3 ({@damage 1d6}) bludgeoning damage.",
+						"Whenever the jackalope moves at least 15ft towards a creature, it can choose to charge against it."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 1} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d4}) piercing damage."
+					]
+				}
 			]
 		}
 	]
