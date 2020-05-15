@@ -13,7 +13,7 @@ Marked Checkboxes represent developed content, where as emtpy checkboxes represe
 #### Transmutation
 
 - [X] Healing Elixir
-- [ ] Flammelian Touch
+- [X] Flammelian Touch
 
 #### Necromancy
 

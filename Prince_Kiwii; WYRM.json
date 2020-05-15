@@ -192,6 +192,111 @@
 					}
 				]
 			}
+        },
+		{
+			"name": "Flammelian Touch",
+			"source": "WYRM",
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "1kg of material in direct contact with the skin.",
+					"consumed": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You hold in one hand the pure material that you wish to use, and with the other hand you must touch the item or creature you wish to affect.",
+				"The two materials at both of your hands begin to switch. If an unwilling creature is affected, it must make a Wisdom saving throw to avoid de effects.",
+				"On a successful save, the spell fails. Otherwise, the creature begins to petrify. It becomes {@condition restrained} until its next turn. On its next turn, it must make a Constitution saving throw. If it fails, it becomes {@condition petrified}. On a successful save, the creature remains restrained for the remained of its turn and the effects of the spell cease.",
+				"If the target of the spell isn't sentient, like a boulder, or has an intelligence score lower than 2, the effect is permanent. The effect is also permanent if the challenge rating is lower than the spellcaster's level.",
+				"Otherwise, the effect lasts as long as the target remains within touch. The maximum size of the target must be Large.",
+				"The material use in the spell becomes the same as the target.",
+				"Example of usage: if a 1kg stone was used to convert a creature into stone, then the creature would become stone and the stone would become inert muscle. Likewise, using the stone on a gold nugget, the stone would become gold and the nugget would be rendered to stone.",
+				"Attention: For this spell to work, both sides must be in direct contact with the the spellcaster. Wearing gloves will have unforseen consequences."
+			],
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"For each slot above 4th, you may consider your spellcaster level to be one level higher for the purposes of this spell.",
+						"For every two slots above 4th, you may affect a creature of one size greater. At 6th level, this would be Huge; and at 8th level, this would be Gargantuan.",
+						"After 8th level, each slot would increase the target's maximum size category by one. Using a 9th level spell slot would allow sizes up to Colossal, 10th would allow Colossal+, and so on."
+					]
+				}
+			],
+			"savingThrow": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "ERLW"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Transmutation",
+							"source": "PHB"
+						}
+					},
+					{
+						"class": {
+							"name": "Druid",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Land",
+							"source": "PHB"
+						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Forge",
+							"source": "XGE"
+						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Nature",
+							"source": "PHB"
+						}
+					}
+				]
+			}
         }
     ],
     "feat": [
