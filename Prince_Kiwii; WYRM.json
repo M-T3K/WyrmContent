@@ -521,9 +521,23 @@
 			]
 		},
 		{
+			"name": "Reinforced Vial",
+			"type": "Item",
+			"rarity": "uncommon",
+			"wondrous": false,
+			"reqAttune": false,
+			"source": "WYRM",
+			"entries": [
+				"This is a reinforced vial made out of double layered quartz reinforced by a mixture of natural polymer. It is not a complex creation, and its usage is widespread among experienced spellcasters, scientists, alchemists, and other creatures.",
+				"They were invented in the Mechanical Arcane States in order to contain special products. Since then, it has also been applied to several types of weaponry.",
+				"They come in different shapes and sizes, but the most common are oval reinforced vials due to their ease of use.",
+				"Standard Military Grade oval reinforced vials has a circumference of 30mm and carries around 250ml of substance, with a weight no higher than than 500g ~ 1 pound"
+			]	
+		},
+		{
 			"name": "Vial of Nekronectar",
 			"type": "Item",
-			"rarity": "rare",
+			"rarity": "very rare",
 			"wondrous": true,
 			"source": "WYRM",
 			"entries": [
@@ -533,12 +547,14 @@
 				"When a living being drinks a Vial of Nekronectar, it acts as a drug. First, it gives a temporary boost to their Strength and Dexterity, gaining {@dice 1d4} on all checks that depend on them for 10 minutes.",
 				"After this time, a living being must make a Constitution Saving throw check against a generalized {@dice 1d20} + 1 for every usage of the substance.",
 				"The difference represents the length in hours for which the being falls into madness. Additionally, it drops to half its current hitpoints and cannot heal beyond that for the duration of the effect.",
-				"Finally, if a creature dies under the effects of the Nekronectar it will rise as an {@creature Nekrospawn|WYRM}, a champion of the Abyss corrrupted by its weakness of mind."
+				"Finally, if a creature dies under the effects of the Nekronectar it will rise as an {@creature Nekrospawn|WYRM}, a champion of the Abyss corrrupted by its weakness of mind.",
+				"",
+				"Additionally, an creature that has a vial of nekronectar may use it as a thrown improvised weapon with range 20ft, unless an external factor increases this range. To do so, make a ranged attack against the target. On a hit, the vial breaks and deals {@dice 2d6} necrotic damage."
 			]	
 		},
 		{
 			"name": "Bracers of Tavern Brawling",
-			"type": "Item",
+			"type": "Armor",
 			"rarity": "very rare",
 			"wondrous": true,
 			"reqAttune": true,
@@ -547,6 +563,88 @@
 			"entries": [
 				"When attuned to these bracers, all unarmed attacks have +1 to both damage and attack rolls. Additionally, it provides +1 to armor."
 			]	
+		},
+		{
+			"name": "Bola",
+			"type": "R",
+			"rarity": "none",
+			"weapon": true,
+			"weaponCategory": "simple",
+			"weight": 1,
+			"value": 50,
+			"dmg1": "1d4",
+			"range": "15/30",
+			"dmgType": "B",
+			"source": "WYRM",
+			"property": [
+				"A",
+				"S"
+			],
+			"entries": [
+				"When using a bola, make a ranged attack against a target. On a hit, you deal {@dice 1d4} bludgeoning damage. ",
+				"Additionally, if the target is of size small or medium, it must succeed on a DC 13 acrobatics or athletics check (take highest) or become {@condition restrained}."
+			]
+		},
+		{
+			"name": "Mechanical Launcher",
+			"type": "R",
+			"rarity": "very rare",
+			"weapon": true,
+			"weaponCategory": "mechanical",
+			"weight": 18,
+			"value": 250000,
+			"dmg1": "1d4-1d12",
+			"range": "60/120",
+			"dmgType": "force",
+			"source": "WYRM",
+			"property": [
+				"A",
+				"CAP6",
+				"H",
+				"2H",
+				"DISTPROJ"
+			],
+			"entries": [
+				"The Mechanical Launcher is a piece of equipment from the Arcane Mechanical States that can be loaded with potions or other compounds that are put inside vials that meet the device's specification.",
+				"The specification for the {@item reinforced vial|WYRM} is the standard military grade oval reinforced vial: 30mm circumference oval vial with 250ml of fluid, of around 1 pound of weight.",
+				"It can hold up to 6 ammunition vials simultaneously before the need to reload.",
+				"Manufacturer's Note: Failure to comply with the specification may result in unforseen consequences, such as the destruction of the weapon. The Mechanical Arcane House of Kastor will not be held responsible due to the incompetence of the user."
+			]
+		}
+	],
+	"itemProperty": [
+		{
+			"abbreviation": "DISTPROJ",
+			"source": "WYRM",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Distance Based Damage (0/120ft)",
+					"entries": [
+						"This weapon is distance based. When attacking with this weapon, its range substitutes that of its ammunition.",
+						"Roll a ranged attack weapon. On a hit, you deal an extra force damage on top of applying the effects of the ammunition. The bonus damage depends on the distance travelled by the projectile:",
+						"Less than 10ft: {@dice 1d12} force damage.",
+						"Less than 20ft: {@dice 1d10} force damage.",
+						"Less than 30ft: {@dice 1d8} force damage.",
+						"Less than 40ft: {@dice 1d6} force damage.",
+						"More than 40ft: {@dice 1d4} force damage.",
+						"More than 120ft: The loss of momentum combined with the resistence of the ammunition prevents the projectile from breaking, and thus none of its effects occur."
+					]
+				}
+			]
+		},
+		{
+			"abbreviation": "CAP6",
+			"source": "WYRM",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Capacity (6)",
+					"entries": [
+						"This weapon can be loaded with up to 6 projectiles simultaneously before it needs to be reloaded again."
+					]
+				}
+			]
 		}
 	],
 	"monster": [

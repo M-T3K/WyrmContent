@@ -8,6 +8,15 @@ This file is called wyrm.json
 Here you can find all planned content for this module. 
 Marked Checkboxes represent developed content, where as emtpy checkboxes represent planned content.
 
+Current contents include:
+
+- [X] 3 New Spells
+- [X] 1 New Race
+- [X] 2 New Potions or Alchemical Component
+- [X] 3 Unique Magical items (plus additional variants)
+- [X] 2 Unique New Weapons
+- [X] 2 New Monsters
+
 ### Spells
 
 #### Transmutation
@@ -30,12 +39,22 @@ Marked Checkboxes represent developed content, where as emtpy checkboxes represe
 
 ### Items
 
-#### Magical Items
-- [X] Jackalope Leg (with Cursed Variant)
+#### Potions & Other Alchemical Components
+
+- [X] Reinforced Vial
 - [X] Vial of Nekronectar
+
+#### Magical Items
+
+- [X] Jackalope Leg (with Cursed Variant)
 - [X] Crystallized Kroken Eye
 - [ ] Philosopher Stone
 - [X] Bracers of Tavern Brawling
+
+#### Weapons
+
+- [X] Bola
+- [X] Mechanical Launcher
 
 ### Creatures
 
