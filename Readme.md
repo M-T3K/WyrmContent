@@ -43,6 +43,8 @@ Current contents include:
 
 - [X] Reinforced Vial
 - [X] Vial of Nekronectar
+- [X] Splashing Compound
+- [X] Exploding Compound
 
 #### Magical Items
 

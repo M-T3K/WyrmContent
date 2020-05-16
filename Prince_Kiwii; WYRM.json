@@ -553,6 +553,32 @@
 			]	
 		},
 		{
+			"name": "Splashing Compound",
+			"type": "Item",
+			"rarity": "uncommon",
+			"wondrous": false,
+			"reqAttune": false,
+			"source": "WYRM",
+			"entries": [
+				"This is a chemical compound that can be used to increase the radius of effect of another substance. When this compound is mixed with most other chemicals, it becomes explosive on contact with the Carbon Dioxide.",
+				"When a vial containing this compound alongside another is broken, the contact with the air causes it to splash, increasing its radius by 5ft.",
+				"Common sources for this splashing compound are Exploding Toads or Exploding Oozes."
+			]	
+		},
+		{
+			"name": "Explosive Compound",
+			"type": "Item",
+			"rarity": "very rare",
+			"wondrous": false,
+			"reqAttune": false,
+			"source": "WYRM",
+			"entries": [
+				"This is a chemical compound that can be used to increase the radius of effect of another substance. When this compound is mixed with most other chemicals, it becomes explosive on contact with Oxygen.",
+				"When a vial containing this compound alongside another is broken, the contact with the air causes it to splash, increasing its radius by 15ft.",
+				"This explosive compound can only be obtained from exploding higher beings like a {@creature Balor|MM}."
+			]	
+		},
+		{
 			"name": "Bracers of Tavern Brawling",
 			"type": "Armor",
 			"rarity": "very rare",
