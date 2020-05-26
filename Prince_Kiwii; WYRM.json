@@ -390,6 +390,46 @@
 					}
 				]
 			}
+		},
+		{
+			"name": "Tongue of Corruption",
+			"source": "WYRM",
+			"level": 12,
+			"school": "SPECIAL",
+			"time": [
+				{
+					"number": 1,
+					"unit": "thought"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": false,
+				"m": false
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"A corrupted language is spoken. If any creature within 30ft speaks the non-corrupted version of the language, it must make a Wisdom Saving Throw equal to 8 + Charisma Modifier + Proficiency Bonus, with a minimum of 10.",
+				"If they fail the saving throw, they will not be capable of sleeping, receiving abyssal nightmares for {@dice 1d4} nights. For every night of interrupted sleep, they gain a level of exhaustion.",
+				"If a creature dies due to this effect, its soul is sent to one of the Lords of the Abyss.",
+				"This spell disregards all magic resistances or immunities. It also disregards immunities to exhaustion, and in general any invulnerabilities, magical or non magical, that a creature or deity may have. If the creature or being does not sleep, it will receive nightmares at random moments throughout the day, usually when they need to focus the most. ",
+				"This is so because this spell is a force of nature itself and not a true spell, and will exist as long as the abyss exists."
+			],
+			"savingThrow": true
         }
     ],
     "feat": [
@@ -1103,6 +1143,53 @@
 					]
 				}
 			]
+		}
+	],
+	"language": [
+		{
+			"name": "Astral",
+			"source": "WYRM",
+			"entries": [
+				"Language spoken in the Astral Plane. Only those that are extremely in sync with the Astral Plane (Particularly those with psychic or psionic abilities) and those that reach the astral plane and leave successfully learn this language.",
+				"If a creature's body and soul both enter the Astral Plane and are capable of leaving it, that creature automatically becomes fluent in Astral. This language can only be spoken, not read nor written. "
+			],
+			"type": "secret"
+		},
+		{
+			"name": "Titanic",
+			"source": "WYRM",
+			"entries": [
+				"Language spoken by the Empyreans, the Aesir, and other titans."
+			],
+			"type": "exotic",
+			"script": "celestial"
+		},
+		{
+			"name": "Deep Speech",
+			"source": "WYRM",
+			"entries": [
+				"Language spoken in the Far Realms and in the Exterior Planes. Its script is similar to braille."
+			],
+			"type": "exotic",
+			"script": "Deep"
+		},
+		{
+			"name": "Fomor",
+			"source": "WYRM",
+			"entries": [
+				"The Fomorians are the elves of the Abyss. Fomor is the language spoken by the Fomorians and other creatures from the Abyss."
+			],
+			"type": "corrupted",
+			"script": "elvish"
+		},
+		{
+			"name": "Crim",
+			"source": "WYRM",
+			"entries": [
+				"In the blood halls of the Crimson King's Throne the only language allowed is Crim, a language rotten by revenge. It is the Corrupted version of Deep Speech. To the uneducated eye, they sound the same, but those who speak any of the languages will instantly be able to differentiate them."
+			],
+			"type": "corrupted",
+			"script": "Deep"
 		}
 	]
 }

@@ -12,12 +12,13 @@ Current contents include:
 
 - [X] 1 new background
 - [X] 2 new feats
-- [X] 3 New Spells
+- [X] 4 New Spells, 1 of which is a special magical effect.
 - [X] 1 New Race
 - [X] 2 New Potions or Alchemical items
 - [X] 4 Unique Magical items (plus additional variants)
 - [X] 2 Unique New Weapons
 - [X] 2 New Monsters
+- [X] 4 New Language
 
 ### Feats
 
@@ -51,6 +52,9 @@ Current contents include:
 #### Conjuration
 
 - [X] Chains of the Forgotten
+
+#### Magical Effects
+- [X] Tongue of Corruption
 
 ### Races
 
@@ -91,3 +95,17 @@ Current contents include:
 - [ ] Nameless from The Nameless City
 - [ ] Ibians from the City of Ib
 - [ ] Splax (Alien Humanoids with Xenomorph shape, meant to be similar to mind flayers)
+
+### Languages
+
+#### New Languages
+
+- [X] Astral
+- [X] Titanic
+
+#### Corrupted Languages
+
+Corrupted languages are the abyssal counterparts to other languages. They represent the corruption of the abyss reaching a culture and influencing their language. Since the abyssal corruption affects everyone differently, every culture or intelligente species' language has a corrupted counterpart. If a creature hears the corrupted version of its mother tongue, it will instantly recognize it, even if it does not speak the corrupted version of the language. The moment this happens, a level 12 spell is automatically cast without anyone involved noticing. The spell is Tongue of Corruption.
+
+- [X] Crim
+- [X] Fomor
