@@ -297,6 +297,99 @@
 					}
 				]
 			}
+		},
+		{
+			"name": "Chains of the Forgotten",
+			"source": "WYRM",
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 45
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": false
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"meta": {
+				"ritual": false
+			},
+			"entries": [
+				"You point to a medium creature within range. Magical chains sprout from the nearest surface (ground, tree, etc) and grab the creature. You determine the flavor of these chains, but it needs to be tied to your character or deity of choice in some way: they could be demonic chains for a demonic patron, spiked roots for a goddess of nature or a druid, etc",
+				"If the creature's CR is less than the level of the spell it is instantly {@condition restrained}. Otherwise, it must make a Strength check ({@skill Athletics}) against your spell save DC. On a fail, it becomes {@condition restrained}. Additionally, if the creature's CR  is less than your spellcaster level it must make the saving throw with disadvantage.",
+				"The creature must repeat the saving throw at the beginning of each of its turns.",
+				"These chains are magical in nature, and a creature {@condition restrained} by them is locked to their current position in the material plane."
+			],
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"For each slot above 3rd you may consider your spellcaster level to be one level higher for the purposes of this spell.",
+						"For every two slots above 3rd, you may affect a creature of one size greater. At 5th level, this would be large; at 7th level, this would be Huge. Starting at 8th level, you can increase the size category by one per spell level.",
+						"Additionally, for every slot above 3rd, you may add 5ft to the range of the spell."
+					]
+				}
+			],
+			"savingThrow": true,
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Conjuration",
+							"source": "PHB"
+						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Forge",
+							"source": "XGE"
+						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Nature",
+							"source": "PHB"
+						}
+					}
+				]
+			}
         }
     ],
     "feat": [
@@ -820,6 +913,150 @@
 					"name": "Bite",
 					"entries": [
 						"{@atk mw} {@hit 1} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d4}) piercing damage."
+					]
+				}
+			]
+		}
+	],
+	"background": [
+		{
+			"name": "Sociopath",
+			"source": "WYRM",
+			"skillProficiencies": [
+				{
+					"choose": {
+						"from": [
+							"deception",
+							"persuasion",
+							"intimidation",
+							"investigation",
+							"insight"
+						],
+						"count": 2
+					}
+				}
+			],
+			"languageProficiencies": [
+				{
+					"any": 2
+				}
+			],
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies",
+							"entry": "Choose any two from {@skill deception}, {@skill persuasion}, {@skill intimidation}, {@skill investigation}, {@skill insight}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiencies",
+							"entry": "One type of artisan's tools"
+						},
+						{
+							"type": "item",
+							"name": "Languages",
+							"entry": "Choose any two languages."
+						}
+					]
+				},
+				{
+					"name": "Overview:",
+					"type": "entries",
+					"entries": [
+						"Something in your childhood marked you deeply, and since then you have been an outcast and exhibited antisocial disorders. You may be a danger to society.",
+						"As a sociopath, you are versed in the arts of manipulation and your mere presence could be a danger to society."
+					]
+				},
+				{
+					"name": "Type of Sociopath",
+					"type": "entries",
+					"entries": [
+						"There are many types of sociopaths. There are those who experience dual personalities alongside their disorder, there are those that focus themselves on manipulation, there are more violent ones, etc.",
+						"Select one from or roll on the following table to determine the type of sociopath your character is.",
+						{
+							"type": "table",
+							"colLabels": [
+								"d4",
+								"Sociopath"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"Truth Manipulator"
+								],
+								[
+									"2",
+									"Dissociative Identity"
+								],
+								[
+									"3",
+									"Psychopath"
+								],
+								[
+									"4",
+									"Machiavellian Narcissistic"
+								]
+							]
+						}
+					]
+				},
+				{
+					"name": "Feature of the Truth Manipulator: Who's truth? Yours or mine?",
+					"type": "entries",
+					"entries": [
+						"You have mastered the arts of deception and persuasion to such an extent that people around you will be more likely to believe you, and they'll also be more likely to tell you what they believe to be true."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Feature of the Dissociative Identity: Jekyll & Mr. Hyde",
+					"type": "entries",
+					"entries": [
+						"Your way is the way of duality. You might be both chaotic and lawful, or both good and evil, or any combination of the two. Due to your dual nature, you perform both good and evil actions with little to no remorse; but that doesn't mean people won't like you. In fact, people who meet your good side first generally find you more likeable, and they'll try to see the best in you and will be more likely to forgive you.",
+						"They will instantly forgive you or believe in you if they haven't witnessed your \"Mr. Hyde\" persona.",
+						"Moreover, since you can be both extremely good or extremely evil, people are more likely to disclose sensible information to you. For example, an alchemist might be more inclined to give you information on where to find his items or the people he trades them with, an innkeeper might give you more details on rumours..."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Feature of the Psychopath: Vigilante? Psycho? Nope, I'm just an Arbiter of Justice.",
+					"type": "entries",
+					"entries": [
+						"You were born broken. You lack the capacity to love or show emotions. When you show them, they are fake. Due to spending all your life faking emotions, you have become proficient in doing so, and your emotions are more believable.",
+						"Moreover, when someone wrongs you, you take justice into your own hands and you feel no remorse in doing so. You may even hinder the local laws in order to uphold your own sort of justice."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"name": "Feature of the Machiavellian Narcissistic: Please, we all know I'm better than you.",
+					"type": "entries",
+					"entries": [
+						"You are the single most important being in the universe, even more so than the gods. The end always justifies the means. Any person that believes themselves better than you will soon meet an irreversible fate.",
+						"Your ego is such that you transmit your greatness to others. All people that talk to you will be more likely to believe that you are better than their leaders and thus are more likely to follow ideals of your choice."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"type": "entries",
+					"name": "Suggested Characteristics",
+					"entries": [
+						"You may use the tables for the {@background charlatan|PHB} background in the Player's Handbook as the basis for your suggested characteristics."
 					]
 				}
 			]

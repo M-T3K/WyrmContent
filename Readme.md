@@ -10,12 +10,30 @@ Marked Checkboxes represent developed content, where as emtpy checkboxes represe
 
 Current contents include:
 
+- [X] 1 new background
+- [X] 2 new feats
 - [X] 3 New Spells
 - [X] 1 New Race
-- [X] 2 New Potions or Alchemical Component
+- [X] 2 New Potions or Alchemical items
 - [X] 3 Unique Magical items (plus additional variants)
 - [X] 2 Unique New Weapons
 - [X] 2 New Monsters
+
+### Feats
+
+#### Martial Feats
+
+- [X] Whip Master
+
+#### Magic Feats
+
+#### Other Feats
+
+- [X] Diplomatic Speaker
+
+### Backgrounds
+
+- [X] Sociopath (With 4 subtypes with differente features)
 
 ### Spells
 
@@ -30,6 +48,9 @@ Current contents include:
 - [ ] Greater Decay
 - [ ] Mass Decay
 
+#### Conjuration
+
+- [X] Chains of the Forgotten
 
 ### Races
 
@@ -39,7 +60,7 @@ Current contents include:
 
 ### Items
 
-#### Potions & Other Alchemical Components
+#### Alchemical Items
 
 - [X] Reinforced Vial
 - [X] Vial of Nekronectar
@@ -65,4 +86,4 @@ Current contents include:
 - [ ] Nekrospawn
 - [ ] Nameless from The Nameless City
 - [ ] Ibians from the City of Ib
-- [ ] Splax (Alien-Like Humanoids with Xenomorph shape, meant to be similar to mind flayers)
+- [ ] Splax (Alien Humanoids with Xenomorph shape, meant to be similar to mind flayers)
