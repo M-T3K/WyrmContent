@@ -15,7 +15,7 @@ Current contents include:
 - [X] 3 New Spells
 - [X] 1 New Race
 - [X] 2 New Potions or Alchemical items
-- [X] 3 Unique Magical items (plus additional variants)
+- [X] 4 Unique Magical items (plus additional variants)
 - [X] 2 Unique New Weapons
 - [X] 2 New Monsters
 
@@ -72,7 +72,11 @@ Current contents include:
 - [X] Jackalope Leg (with Cursed Variant)
 - [X] Crystallized Kroken Eye
 - [ ] Philosopher Stone
+
+#### Armor Items (Magical or non Magical)
+
 - [X] Bracers of Tavern Brawling
+- [X] First Mask of the Star Hunter
 
 #### Weapons
 
