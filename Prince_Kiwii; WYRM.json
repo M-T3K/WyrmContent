@@ -693,7 +693,7 @@
 			"source": "WYRM",
 			"entries": [
 				"This mask is more like a helmet, and only one of its kind exists. Created by bounty hunter Zorû Älbân for himself, it offers decent protection for the entire head of the person.",
-				"Additionally, it offers several locks to add future attachments, like {@items Goggles of Night|dmg}, {@item Goggles of Object Reading|EGW}, or {@item Finder's Goggles|ERLW}. Generally, any small item can be used as an attachment if it is repurposed.",
+				"Additionally, it offers several locks to add future attachments, like {@item Goggles of Night|dmg}, {@item Goggles of Object Reading|EGW}, or {@item Finder's Goggles|ERLW}. Generally, any small item can be used as an attachment if it is repurposed.",
 				"However, repurposing an item to become an attachment is not easy. It requires hours if not days of work (at GM's Discretion), and materials, and even then the process may fail. You can try this process again after {@dice 1d4} days.",
 				"Upon designing it, Zorû made the mask with a specific set of otherwordly materials (Hence the word Star in its name). By speaking a command word (no action required) the mask becomes invisible and ethereal, meaning anything can go through it. By doing the same again, the mask reveals its true form. While in ethereal form, it doesn't provide any additional AC."
 			],
